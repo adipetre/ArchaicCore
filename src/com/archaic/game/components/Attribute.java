@@ -5,7 +5,7 @@ public enum Attribute {
 	CONSTITUTION,	// affects hit points, resistance to disease
 	FORTITUDE,		// affects stamina
 	DEXTERITY,		// affects accuracy, speed
-	INTELLIGENCE,	// affects experience gain
+	INTELLIGENCE,	// affects experience gain, tasks
 	CHARISMA,		// affects ....
 	WISDOM,			// affects ...
 	WILLPOWER,		// affects bravery/panic
