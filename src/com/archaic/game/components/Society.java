@@ -7,25 +7,14 @@ import com.archaic.game.living.Animal;
 
 public class Society {
 	private Set<Animal> members;
-	private Attributes minAttributes;
-	private Attributes maxAttributes;
+	private TechTree techTree;
+	
 	
 	public Society ()
 	{
 		members = new LinkedHashSet<Animal>();
-		setMinAttributes(new Attributes.Builder().build());
-		setMaxAttributes(new Attributes.Builder().
-				attribute(Attribute.STRENGTH, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.CHARISMA, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.CONSTITUTION, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.DEXTERITY, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.FORTITUDE, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.INTELLIGENCE, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.LUCK, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.PERCEPTION, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.WILLPOWER, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				attribute(Attribute.WISDOM, 2 * Attributes.DEFAULT_ATTRIBUTE_VALUE).
-				build());
+		techTree = new TechTree();
+		
 	}
 	
 	public Set<Animal> getMembers()
@@ -62,16 +51,10 @@ public class Society {
 		}
 		return (double)males / getMembersSize();
 	}
-	public Attributes getMinAttributes() {
-		return minAttributes;
+	
+	public TechTree getTechsTree()
+	{
+		return techTree;
 	}
-	public void setMinAttributes(Attributes minAttributes) {
-		this.minAttributes = minAttributes;
-	}
-	public Attributes getMaxAttributes() {
-		return maxAttributes;
-	}
-	public void setMaxAttributes(Attributes maxAttributes) {
-		this.maxAttributes = maxAttributes;
-	}
+	
 }

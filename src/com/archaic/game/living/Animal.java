@@ -41,7 +41,7 @@ public class Animal {
 			this.society = society;
 			this.gender = Gender.getGender(society.getMemberSexRatio());
 			Attributes raceattributes = new Attributes.Builder().
-					buildInRange(society.getMinAttributes(), society.getMaxAttributes());
+					buildInRange(society.getTechsTree().getMinAttributes(), society.getTechsTree().getMaxAttributes());
 			this.attributes = new Attributes.Builder().
 					buildInRange(raceattributes, attributes);
 			return this;
